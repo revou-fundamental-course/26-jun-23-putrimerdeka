@@ -1,0 +1,392 @@
+:root {
+	
+	--span-12: calc(100% / 12);
+	
+	--w-1: var(--span-12);
+	--w-2: calc(var(--span-12) * 2);
+	--w-3: calc(var(--span-12) * 3);
+	--w-4: calc(var(--span-12) * 4);
+	--w-5: calc(var(--span-12) * 5);
+	--w-6: calc(var(--span-12) * 6);
+	--w-7: calc(var(--span-12) * 7);
+	--w-8: calc(var(--span-12) * 8);
+	--w-9: calc(var(--span-12) * 9);
+	--w-10: calc(var(--span-12) * 10);
+	--w-11: calc(var(--span-12) * 11);
+	--w-12: 100%;
+	
+	--container: calc(var(--w-12) - var(--size-6));
+
+	scroll-behavior: smooth;
+	font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.border {
+	
+	width: 10%;
+	margin: 100px auto;
+}
+.main-title {
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.section-title {
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+.subsection-title {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	background-color: yellow;
+	width: 100%;
+}
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+}
+.navbar .logo img {
+	width: 100px;
+	padding: 50px;
+}
+.menu-button {
+	padding: 30px 30px;
+	background-color: green;
+	border-radius: 1px;
+	font-family: inherit;
+	display: block;
+	
+}
+.menu-button:hover {
+	background-color: yellowgreen;
+	cursor: pointer;
+}
+.navigation-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 4px;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 150ms ease-in-out;
+}
+.navigation-list.show {
+	top: 12px;
+	visibility: visible;
+	opacity: 100%;
+}
+.navigation-list li {
+	padding: 10px 20px;
+}
+.navigation-list li a {
+	display: block;
+}
+
+.main-content {
+	overflow-x: hidden;
+}
+.hero {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.hero-wrapper {
+	height: 80%;
+	width: 100%;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
+}
+.hero-description {
+	margin-bottom: 100px;
+}
+.about-contact {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	margin-top: 4px;
+}
+.about {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 0 0 4px;
+}
+.about-img {
+	width: 100%;
+	border-radius: 20px;
+}
+.about-caption {
+	font-style: italic;
+	padding: 0;
+	text-align: center;
+}
+.about-caption::before, .about-caption::after {
+	content: '"';
+}
+.about-author {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	padding: 0;
+	justify-content: center;
+}
+.author-img {
+	width: 80px;
+	height: 80px;
+}
+.author-data {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	justify-content: center;
+	text-align: c;
+}
+.author-name {
+	font-weight: 700;
+	
+}
+.author-info {
+	font-style: italic;
+}
+
+.feature-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 4px 0;
+}
+.feature-item {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+	align-items: center;
+}
+.feature-icon {
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact {
+	background-color: lightgray;
+	padding: 20px;
+	width: auto;
+	height: 1000px;
+	
+	
+}
+.contact-form {
+	margin-top: 50px;
+	
+}
+.form-field {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+	height: 100px;
+}
+.input-label {
+	font-weight: 500;
+}
+.input-field {
+	padding: 8px;
+	border: 2px solid black;
+	border-radius: 1px;
+	font-family: inherit;
+}
+.error-msg {
+	font-size: 12px;
+	color: red;
+	font-weight: 500;
+	visibility: hidden;
+	display: none;
+}
+.contact-form .button {
+	width: 100%;
+	padding: 10px;
+}
+.package {
+	margin-top: 4px;
+}
+.package-banner {
+	padding: 50px;
+	background-color: lightgray;
+	text-align: center;
+}
+.package-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 20px;
+}
+.package-item {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	align-items: flex-start;
+	width: 30%;
+}
+.package-icon {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.package-content {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.package-content h3 {
+	font-weight: 500;
+}
+
+.cta {
+	margin-top: 50px;
+	padding: 50px 0;
+	border-top: 1px solid gray;
+}
+.cta .container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
+}
+.cta .container p {
+	width: 50%;
+}
+.cta .container .button {
+	width: 20%;
+}
+
+.footer {
+	padding: 10px;
+	background-color: yellow;
+
+}
+.footer .container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+}
+.footer-navigation {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+a {
+	font-weight: 500;
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	cursor: pointer;
+	text-decoration: underline solid re 3px;
+}
+
+@media only screen and (min-width: 768px) {
+	:root {
+		--container: calc(768px - calc(var(--size-6) * 2));
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		--container: calc(1024px - calc(var(--size-6) * 2));
+	}
+	.navbar .logo img {
+		width: 128px;
+	}
+	.menu-button {
+		display: none;
+	}
+	.navigation-list {
+		flex-direction: row;
+		gap: 0;
+		padding: 0;
+		visibility: visible;
+		opacity: 100%;
+		position: static;
+		width: auto;
+		background-color: transparent;
+		z-index: 0;
+	}
+	.about-contact {
+		flex-direction: row;
+	}
+	.about {
+		width: var(--w-8);
+	}
+	.about-caption {
+		padding: 0 var(--size-6);
+	}
+	.about-author {
+		padding: 0 var(--size-6);
+	}
+	.contact {
+		width: var(--w-4);
+	}
+	.package-list {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.package-item {
+		width: var(--w-4);
+	}
+	.cta .container p {
+		width: var(--w-6);
+	}
+	.cta .container .button {
+		width: var(--w-3);
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	:root {
+		--container: calc(1280px - calc(var(--size-6) * 2));
+	}
+}
+
+@media only screen and (min-width: 1536px) {
+	:root {
+		--container: calc(1536px - calc(var(--size-6) * 2));
+	}
+}
